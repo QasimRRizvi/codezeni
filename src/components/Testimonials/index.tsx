@@ -30,6 +30,24 @@ const testimonialData: Testimonial[] = [
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
+  {
+    id: 4,
+    name: "Lethium Frenci",
+    designation: "Founder @Lineicons",
+    content:
+      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    image: "/images/testimonials/auth-03.png",
+    star: 5,
+  },
+  {
+    id: 5,
+    name: "Lethium Frenci",
+    designation: "Founder @Lineicons",
+    content:
+      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    image: "/images/testimonials/auth-03.png",
+    star: 5,
+  },
 ];
 
 const Testimonials = () => {
@@ -42,10 +60,14 @@ const Testimonials = () => {
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+        <div className="relative">
+          <div className="flex overflow-x-auto pb-8 gap-8 snap-x snap-mandatory scrollbar-hide">
+            {testimonialData.map((testimonial) => (
+              <div key={testimonial.id} className="flex-none w-[300px] md:w-[400px] snap-center">
+                <SingleTestimonial testimonial={testimonial} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">
