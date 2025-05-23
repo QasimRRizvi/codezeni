@@ -1,21 +1,21 @@
 import SectionTitle from "../Common/SectionTitle";
-import SingleFeature from "./SingleFeature";
-import featuresData from "./featuresData";
+import SingleService from "./SingleService";
+import servicesData from "./servicesData";
 
-const Features = () => {
+const Services = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
+      <section id="services" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Services"
+            paragraph="We offer end-to-end digital solutions designed to accelerate your business growth — from sleek websites to powerful mobile apps, scalable MVPs, and dedicated tech talent."
             center
           />
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map((feature) => (
-              <SingleFeature key={feature.id} feature={feature} />
+            {servicesData.map((service) => (
+              <SingleService key={service.id} service={service} />
             ))}
           </div>
         </div>
@@ -24,4 +24,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Services;

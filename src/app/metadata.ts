@@ -1,38 +1,49 @@
 import { Metadata } from 'next';
 
 const metadata: Metadata = {
-  title: 'CodeZeni - Modern Software Development Platform',
-  description: 'CodeZeni is a modern software development platform built with Next.js and Tailwind CSS, designed to help developers and teams build better software faster.',
-  keywords: [
-    'software development',
-    'coding platform',
-    'developer tools',
-    'Next.js',
-    'TypeScript',
-    'React',
-    'Tailwind CSS',
-  ],
-  authors: [{ name: 'CodeZeni Team' }],
+  title: 'CodeZeni - IT Services & Solutions',
+  description: 'CodeZeni provides expert IT services including Staff Augmentation, Web Development, Mobile App Development, and MVP Development. Transform your business with our cutting-edge solutions.',
+  keywords: 'IT services, staff augmentation, web development, mobile app development, MVP development, software development, IT solutions',
+  authors: [{ name: 'CodeZeni' }],
   creator: 'CodeZeni',
   publisher: 'CodeZeni',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://codezeni.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-us',
+    },
+  },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'CodeZeni - Modern Software Development Platform',
-    description: 'Build better software faster with CodeZeni',
+    title: 'CodeZeni - IT Services & Solutions',
+    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, and MVP Development solutions.',
     url: 'https://codezeni.com',
     siteName: 'CodeZeni',
+    images: [
+      {
+        url: '/images/logo/logo.svg',
+        width: 140,
+        height: 30,
+        alt: 'CodeZeni Logo',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CodeZeni - Modern Software Development Platform',
-    description: 'Build better software faster with CodeZeni',
-    creator: '@codezeni',
-    site: '@codezeni',
+    title: 'CodeZeni - IT Services & Solutions',
+    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, and MVP Development solutions.',
+    images: ['/images/logo/logo.svg'],
   },
   viewport: {
     width: 'device-width',
