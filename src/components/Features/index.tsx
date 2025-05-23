@@ -9,7 +9,7 @@ const Services = () => {
         <div className="container">
           <SectionTitle
             title="Services"
-            paragraph="We offer end-to-end digital solutions designed to accelerate your business growth — from sleek websites to powerful mobile apps, scalable MVPs, and dedicated tech talent."
+            paragraph="We offer end-to-end digital solutions designed to accelerate your business growth — from intuitive UI/UX design and sleek websites to powerful mobile apps, scalable MVPs, and dedicated tech talent."
             center
           />
 

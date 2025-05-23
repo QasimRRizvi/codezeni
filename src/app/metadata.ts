@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 
 const metadata: Metadata = {
   title: 'CodeZeni - IT Services & Solutions',
-  description: 'CodeZeni provides expert IT services including Staff Augmentation, Web Development, Mobile App Development, and MVP Development. Transform your business with our cutting-edge solutions.',
-  keywords: 'IT services, staff augmentation, web development, mobile app development, MVP development, software development, IT solutions',
+  description: 'CodeZeni provides expert IT services including Staff Augmentation, Web Development, Mobile App Development, UI/UX Design, and MVP Development. Transform your business with our cutting-edge solutions.',
+  keywords: 'IT services, staff augmentation, web development, mobile app development, UI/UX Design, MVP development, software development, IT solutions',
   authors: [{ name: 'CodeZeni' }],
   creator: 'CodeZeni',
   publisher: 'CodeZeni',
@@ -25,7 +25,7 @@ const metadata: Metadata = {
   },
   openGraph: {
     title: 'CodeZeni - IT Services & Solutions',
-    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, and MVP Development solutions.',
+    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, UI/UX Design, and MVP Development solutions.',
     url: 'https://codezeni.com',
     siteName: 'CodeZeni',
     images: [
@@ -42,7 +42,7 @@ const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'CodeZeni - IT Services & Solutions',
-    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, and MVP Development solutions.',
+    description: 'Transform your business with CodeZeni\'s expert IT services. We offer Staff Augmentation, Web Development, Mobile App Development, UI/UX Design, and MVP Development solutions.',
     images: ['/images/logo/logo.svg'],
   },
   viewport: {
