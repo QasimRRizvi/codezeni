@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { smoothScroll } from "@/utils/smoothScroll";
 
 const Header = () => {
   // Navbar toggle
@@ -37,6 +38,13 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.href;
+    if (href.includes('#')) {
+      smoothScroll(e);
+    }
+  };
 
   return (
     <>
@@ -110,6 +118,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={handleClick}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
