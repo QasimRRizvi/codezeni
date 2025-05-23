@@ -27,10 +27,10 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Build better software faster with CodeZeni. Our modern development platform helps teams collaborate efficiently and deliver high-quality code.
+                  Your trusted partner for comprehensive IT solutions. We deliver innovative technology services to help businesses thrive in the digital age.
                 </p>
                 <div className="flex items-center">
-                  <a
+                <a
                     href="https://github.com/codezeni"
                     aria-label="GitHub"
                     target="_blank"
@@ -97,65 +97,39 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Product
+                  Services
                 </h2>
                 <ul>
                   <li>
                     <Link
-                      href="/features"
+                      href="/#services"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Features
+                      Staff Augmentation
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/pricing"
+                      href="/#services"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
+                      Web Development
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/docs"
+                      href="/#services"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Documentation
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Resources
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Blog
+                      Mobile Development
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/community"
+                      href="/#services"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Community
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/docs/examples"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Examples
+                      MVP Development
                     </Link>
                   </li>
                 </ul>
@@ -165,31 +139,23 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support
+                  Contact
                 </h2>
                 <ul>
                   <li>
                     <Link
-                      href="/contact"
+                      href="/#contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Contact Us
+                      Get in Touch
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/docs/getting-started"
+                      href="/#about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Getting Started
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/docs/api"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      API Reference
+                      About Us
                     </Link>
                   </li>
                 </ul>
