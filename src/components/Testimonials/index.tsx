@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "CodeZeni transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and technical expertise exceeded our expectations.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Working with CodeZeni was a game-changer for our business. They delivered a scalable e-commerce solution that has significantly increased our online sales.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The team at CodeZeni are true professionals. They built us a custom web application that streamlined our operations and improved our team's productivity.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -56,7 +56,7 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Don't just take our word for it. Here's what our clients have to say about their experience working with us on their web development projects."
           center
         />
 
