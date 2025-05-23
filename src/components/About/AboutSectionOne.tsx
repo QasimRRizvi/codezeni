@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Your Trusted IT Solutions Partner"
+                paragraph="At CodeZeni, we combine technical expertise with business acumen to deliver innovative solutions that drive growth. Our team of skilled professionals is dedicated to helping businesses transform their digital presence and achieve their goals."
                 mb="44px"
               />
 
@@ -35,15 +35,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Expert Team" />
+                    <List text="Agile Development" />
+                    <List text="Quality Assurance" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="24/7 Support" />
+                    <List text="Scalable Solutions" />
+                    <List text="Cost-Effective" />
                   </div>
                 </div>
               </div>

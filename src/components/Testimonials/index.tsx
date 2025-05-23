@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "CodeZeni transformed our online presence with a stunning website that perfectly captures our brand identity. Their attention to detail and technical expertise exceeded our expectations, delivering a solution that truly represents our vision.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Working with CodeZeni was a game-changer for our business. They delivered a scalable e-commerce solution that has significantly increased our online sales while maintaining excellent performance and user experience.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,25 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The team at CodeZeni are true professionals. They built us a custom web application that streamlined our operations and improved our team's productivity through innovative features and intuitive design.",
+    image: "/images/testimonials/auth-03.png",
+    star: 5,
+  },
+  {
+    id: 4,
+    name: "Sarah Johnson",
+    designation: "CTO @TechInnovate",
+    content:
+      "CodeZeni delivered an exceptional mobile-responsive website that perfectly aligns with our brand vision. Their expertise in modern web technologies and attention to performance has significantly improved our user engagement.",
+    image: "/images/testimonials/auth-03.png",
+    star: 5,
+  },
+  {
+    id: 5,
+    name: "David Chen",
+    designation: "Product Manager @StartupHub",
+    content:
+      "The custom web application developed by CodeZeni has revolutionized our workflow. Their agile development approach and regular communication made the entire process smooth and efficient, delivering exceptional results.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -34,18 +52,22 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section id="testimonials" className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Don't just take our word for it. Here's what our clients have to say about their experience working with us on their web development projects."
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+        <div className="relative">
+          <div className="flex overflow-x-auto pb-8 gap-8 snap-x snap-mandatory scrollbar-hide">
+            {testimonialData.map((testimonial) => (
+              <div key={testimonial.id} className="flex-none w-[300px] md:w-[400px] snap-center">
+                <SingleTestimonial testimonial={testimonial} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">
@@ -137,8 +159,8 @@ const Testimonials = () => {
               y2="8.15715"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#8D2CE3" stopOpacity="0" />
+              <stop offset="1" stopColor="#8D2CE3" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_72:302"
@@ -148,8 +170,8 @@ const Testimonials = () => {
               y2="-2.84285"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#8D2CE3" stopOpacity="0" />
+              <stop offset="1" stopColor="#8D2CE3" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_72:302"
@@ -159,8 +181,8 @@ const Testimonials = () => {
               y2="19.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#8D2CE3" stopOpacity="0" />
+              <stop offset="1" stopColor="#8D2CE3" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_72:302"
@@ -170,8 +192,8 @@ const Testimonials = () => {
               y2="31.1572"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" stopOpacity="0" />
-              <stop offset="1" stopColor="#4A6CF7" />
+              <stop stopColor="#8D2CE3" stopOpacity="0" />
+              <stop offset="1" stopColor="#8D2CE3" />
             </linearGradient>
           </defs>
         </svg>
