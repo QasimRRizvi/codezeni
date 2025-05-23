@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "CodeZeni transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and technical expertise exceeded our expectations.",
+      "CodeZeni transformed our online presence with a stunning website that perfectly captures our brand identity. Their attention to detail and technical expertise exceeded our expectations, delivering a solution that truly represents our vision.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Working with CodeZeni was a game-changer for our business. They delivered a scalable e-commerce solution that has significantly increased our online sales.",
+      "Working with CodeZeni was a game-changer for our business. They delivered a scalable e-commerce solution that has significantly increased our online sales while maintaining excellent performance and user experience.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,25 +26,25 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "The team at CodeZeni are true professionals. They built us a custom web application that streamlined our operations and improved our team's productivity.",
+      "The team at CodeZeni are true professionals. They built us a custom web application that streamlined our operations and improved our team's productivity through innovative features and intuitive design.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
   {
     id: 4,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Sarah Johnson",
+    designation: "CTO @TechInnovate",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "CodeZeni delivered an exceptional mobile-responsive website that perfectly aligns with our brand vision. Their expertise in modern web technologies and attention to performance has significantly improved our user engagement.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
   {
     id: 5,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "David Chen",
+    designation: "Product Manager @StartupHub",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The custom web application developed by CodeZeni has revolutionized our workflow. Their agile development approach and regular communication made the entire process smooth and efficient, delivering exceptional results.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
