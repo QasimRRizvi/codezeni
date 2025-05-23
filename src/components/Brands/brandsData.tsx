@@ -3,8 +3,8 @@ import { Brand } from "@/types/brand";
 const brandsData: Brand[] = [
   {
     id: 6,
-    name: "Formbold",
-    href: "https://formbold.com",
+    name: "HabitDriven",
+    href: "https://habitdriven.ai",
     image: "/images/brands/formbold.svg",
     imageLight: "/images/brands/formbold-light.svg",
   },
