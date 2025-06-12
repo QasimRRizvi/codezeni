@@ -23,7 +23,7 @@ CodeZeni is a modern software development platform built with Next.js and Tailwi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/codezeni.git
+git clone https://github.com/QasimRRizvi/codezeni.git
 
 # Navigate to the project directory
 cd codezeni
@@ -51,12 +51,9 @@ Make sure you have Node.js 18+ and npm installed on your system.
 ### 📄 License
 CodeZeni is licensed under the MIT License. See the LICENSE file for more details.
 
-### 🤝 Contributing
-We welcome contributions! Please feel free to submit a Pull Request.
-
 ### 📅 Updates
 
-**April 2024**
+**May 2025**
 - Initial release of CodeZeni
 - Modern UI implementation
 - Dark/Light theme support
