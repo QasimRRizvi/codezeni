@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import { smoothScroll } from "@/utils/smoothScroll";
+import useScroll from "@/hooks/useScroll";
 
 const Header = () => {
   // Navbar toggle
@@ -13,6 +13,9 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+
+  // Scroll to section
+  const { handleClick } = useScroll();
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -38,13 +41,6 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = e.currentTarget.href;
-    if (href.includes('#')) {
-      smoothScroll(e);
-    }
-  };
 
   return (
     <>
