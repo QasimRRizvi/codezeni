@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import useScroll from "@/hooks/useScroll";
 
 const Hero = () => {
+  const { handleClick } = useScroll();
   return (
     <>
       <section
@@ -19,13 +23,15 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="/contact"
+                    href="/#contact"
+                    onClick={handleClick}
                     className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
                     Get In Touch
                   </Link>
                   <Link
-                    href="/about"
+                    href="/#about"
+                    onClick={handleClick}
                     className="rounded-md bg-black/20 px-8 py-4 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
                   >
                     Learn More
