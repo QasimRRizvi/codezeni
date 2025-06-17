@@ -1,8 +1,12 @@
 "use client";
+import useScroll from "@/hooks/useScroll";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  // Scroll to section
+  const { handleClick } = useScroll();
+
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -30,7 +34,7 @@ const Footer = () => {
                   Your trusted partner for comprehensive IT solutions. We deliver innovative technology services to help businesses thrive in the digital age.
                 </p>
                 <div className="flex items-center">
-                <a
+                  <a
                     href="https://github.com/codezeni"
                     aria-label="GitHub"
                     target="_blank"
@@ -145,6 +149,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/#contact"
+                      onClick={handleClick}
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Get in Touch
@@ -153,6 +158,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/#about"
+                      onClick={handleClick}
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       About Us
