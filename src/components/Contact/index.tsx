@@ -1,6 +1,65 @@
+"use client";
 import NewsLatterBox from "./NewsLatterBox";
+import { useState, FormEvent } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fill in all fields",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          to: "info@codezeni.com",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Message sent successfully! We'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,7 +76,19 @@ const Contact = () => {
                 Get in touch with our team to discuss how we can help transform your business with our IT solutions.
               </p>
 
-              <form>
+              {submitStatus.message && (
+                <div
+                  className={`mb-8 rounded-xs p-4 ${
+                    submitStatus.type === "success"
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -29,8 +100,14 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        id="name"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                         placeholder="Enter your name"
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        required
                       />
                     </div>
                   </div>
@@ -44,8 +121,14 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         placeholder="Enter your email"
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        required
                       />
                     </div>
                   </div>
@@ -58,16 +141,26 @@ const Contact = () => {
                         Project Details
                       </label>
                       <textarea
+                        id="message"
                         name="message"
+                        value={formData.message}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
                         rows={5}
                         placeholder="Tell us about your project requirements"
                         className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        required
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Send Message
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                 </div>
