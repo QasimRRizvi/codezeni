@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: Request) {
+// Function to send email asynchronously
+async function sendEmailAsync(name: string, email: string, message: string, to: string) {
   try {
-    const { name, email, message, to } = await request.json();
 
     // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
@@ -29,18 +29,28 @@ export async function POST(request: Request) {
         <p>${message}</p>
       `,
     };
-
-    // Send email
     await transporter.sendMail(mailOptions);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
 
+export async function POST(request: Request) {
+  try {
+    const { name, email, message, to } = await request.json();
+
+    // Start email sending process in the background
+    sendEmailAsync(name, email, message, to).catch(console.error);
+
+    // Return immediate success response
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      { message: "Form submitted successfully" },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error processing request:", error);
     return NextResponse.json(
-      { message: "Failed to send email" },
+      { message: "Failed to process request" },
       { status: 500 }
     );
   }
